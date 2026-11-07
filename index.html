@@ -13,7 +13,8 @@ body{margin:0;background:var(--creme);color:var(--encre);font-family:"Instrument
 main{max-width:1200px;margin:0 auto;padding:56px 24px 88px}
 .logo{height:44px;width:auto;display:block;margin-bottom:56px}
 h1{font-family:Anton,"Arial Narrow",sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(36px,5vw,64px);line-height:1.05;margin:0 0 16px}
-.chapo{font-size:19px;line-height:1.5;max-width:680px;margin:0 0 56px;color:var(--doux)}
+.chapo{font-size:19px;line-height:1.5;max-width:680px;margin:0 0 16px;color:var(--doux)}
+.chapo:last-of-type{margin-bottom:56px}
 .pistes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
 .piste{display:flex;flex-direction:column;background:#fff;border:1px solid var(--filet);color:inherit;text-decoration:none;transition:border-color .15s}
 .piste:hover,.piste:focus-visible{border-color:var(--vert);outline:none}
@@ -30,7 +31,8 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--filet);font-s
 <main>
   <img class="logo" src="piste-A/img/logo-iseeer-vert.svg" alt="Iseeer">
   <h1>Le site, en trois pistes</h1>
-  <p class="chapo">Les mêmes textes et les mêmes sept pages, dans trois partis pris graphiques. Chaque piste se parcourt comme un vrai site : menu, liens, pages légales. La barre grise tout en haut permet de revenir ici, ou de passer à la même page dans la piste précédente ou suivante, pour comparer.</p>
+  <p class="chapo">Voici trois pistes en 7 pages. Le contenu (texte, images, etc.) est provisoire, il s’appuie sur les éléments que j’ai collectés (présentation, articles de presse et autres). Il faudra tout relire attentivement.</p>
+  <p class="chapo">La barre grise tout en haut permet de revenir ici, ou de passer à la même page dans la piste précédente ou suivante, pour comparer.</p>
   <div class="pistes">
     <a class="piste" href="piste-A/index.html">
       <img src="apercus/piste-A.jpg" alt="">
