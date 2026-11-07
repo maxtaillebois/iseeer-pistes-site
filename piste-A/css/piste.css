@@ -1,0 +1,50 @@
+/* Iseeer, piste A : styles partagés des pages du site.
+   Complète composants.css et iseeer-site.css sans les modifier. */
+
+/* Bouton sans destination tant que le document n'est pas fourni */
+.piste-btn-inactif { opacity: .55; cursor: not-allowed; }
+.piste-btn-inactif:hover { text-decoration: none; }
+
+/* Grilles qui ne débordent jamais de leur conteneur */
+.piste-grille { display: grid; gap: var(--espace-4) var(--espace-3); margin: 0; padding: 0; list-style: none; }
+.piste-grille--portraits { grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+.piste-grille--cartes { grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); }
+.piste-grille--logos { grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr)); gap: var(--espace-2); }
+
+/* Portrait horizontal (direction générale) */
+.piste-portrait-ligne { display: flex; flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: var(--espace-3); }
+.piste-portrait-ligne .ise-portrait__cadre { flex: 0 0 140px; }
+.piste-portrait-ligne figcaption { flex: 1 1 200px; min-width: 0; }
+
+/* Formulaire de contact */
+.piste-formulaire { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: var(--espace-3); }
+.piste-formulaire .piste-large { grid-column: 1 / -1; }
+.piste-formulaire label { color: var(--texte); }
+.piste-formulaire select.ise-champ { appearance: auto; }
+.piste-case { display: flex; align-items: flex-start; gap: var(--espace-2); }
+.piste-case input { flex-shrink: 0; width: 22px; height: 22px; margin: 3px 0 0; accent-color: var(--action); }
+
+/* Pages de service : texte courant */
+.piste-texte-long { max-width: var(--mesure-texte); display: flex; flex-direction: column; gap: var(--espace-3); }
+.piste-texte-long p { margin: 0; }
+
+/* Mobile : le menu passe sous le logo et va à la ligne proprement */
+@media (max-width: 899px) {
+  .ise-entete { column-gap: var(--espace-2); }
+  .ise-entete > nav { order: 3; flex: 1 1 100%; min-width: 0; padding-top: var(--espace-1); border-top: 1px solid var(--filet); }
+  .ise-entete__menu { column-gap: var(--espace-3) !important; row-gap: 0 !important; }
+  .ise-entete__menu a { display: inline-block; padding: 10px 0; }
+}
+@media (max-width: 599px) {
+  .ise-entete { padding-left: var(--espace-2); padding-right: var(--espace-2); }
+  .ise-entete__logo { height: 34px; }
+  .ise-btn { white-space: normal; text-align: center; }
+  .ise-entete__outils .ise-btn { white-space: nowrap; }
+}
+@media (max-width: 599px) {
+  .piste-panneau { padding-left: var(--espace-2) !important; padding-right: var(--espace-2) !important; }
+}
+
+
+/* Menu principal fixé en haut de l’écran pendant le défilement (sur mobile, le menu sur plusieurs lignes prendrait trop de hauteur) */
+@media (min-width:901px){[data-entete]{position:sticky;top:0;z-index:100}}

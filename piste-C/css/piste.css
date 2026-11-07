@@ -1,0 +1,65 @@
+/* Iseeer, piste C : styles propres à la piste (cb-…), communs à toutes les pages.
+   Les règles du haut sont celles des maquettes validées (index, campus), reprises telles quelles. */
+
+body{margin:0;background:#f5f1e9}
+a:not(.ise-btn){color:#2b5445}a:not(.ise-btn):hover{color:#171e19}
+.cb-vert{--fond:#2b5445;--fond-releve:#234d40;--texte:#f5f1e9;--texte-doux:#f5f1e9;--texte-marque:#f5f1e9;--action:#98b571;--sur-action:#171e19;--bordure:#f5f1e9;--filet:rgba(245,241,233,.32);--focus:#98b571;--accent:#98b571;background:#2b5445;color:#f5f1e9}
+.cb-clair{--fond:#98b571;--texte:#171e19;--texte-doux:#171e19;--texte-marque:#171e19;--action:#2b5445;--sur-action:#f5f1e9;--bordure:#171e19;--filet:rgba(23,30,25,.4);--focus:#171e19;--accent:#2b5445;background:#98b571;color:#171e19}
+.cb-encre{--fond:#171e19;--texte:#f5f1e9;--texte-doux:#c9c6bd;--texte-marque:#98b571;--action:#98b571;--sur-action:#171e19;--bordure:#c9c6bd;--filet:#3d453f;--focus:#98b571;--accent:#98b571;background:#171e19;color:#f5f1e9}
+.cb-vert a:not(.ise-btn),.cb-vert a:not(.ise-btn):hover,.cb-encre a:not(.ise-btn),.cb-encre a:not(.ise-btn):hover{color:#f5f1e9}
+.cb-clair a:not(.ise-btn),.cb-clair a:not(.ise-btn):hover{color:#171e19}
+.cb-pale{--fond:#e6ecdd;--texte:#171e19;--texte-doux:#3d453f;--texte-marque:#2b5445;--action:#2b5445;--sur-action:#f5f1e9;--bordure:#171e19;--filet:rgba(23,30,25,.25);--focus:#2b5445;--accent:#2b5445;background:#e6ecdd;color:#171e19}
+.cb-pale a:not(.ise-btn),.cb-pale a:not(.ise-btn):hover{color:#171e19}
+.cb-conteneur{max-width:1440px;margin:0 auto;box-sizing:border-box;padding-left:clamp(16px,3.06vw,44px);padding-right:clamp(16px,3.06vw,44px)}
+.cb-section{padding-top:clamp(56px,6.12vw,88px);padding-bottom:clamp(56px,6.12vw,88px)}
+.cb-une{font-family:var(--font-display);font-weight:400;font-size:clamp(46px,5.56vw,80px);line-height:1.08}
+.cb-titre{font-family:var(--font-sans);font-weight:600;text-transform:none;font-size:clamp(22px,2.08vw,30px);line-height:1.25;letter-spacing:0}
+.cb-nombre{display:block;font-family:var(--font-display);font-weight:400;font-size:clamp(72px,8.33vw,120px);line-height:1;letter-spacing:-.01em}
+.cb-mot{font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:clamp(30px,3.06vw,44px);line-height:1.05}
+.cb-num{font-family:var(--font-display);font-size:28px;line-height:1;letter-spacing:0}
+
+/* Ajouts pour les pages suivantes */
+
+/* Message de confirmation du formulaire factice : visible seulement après l'envoi (ancre #merci) */
+.cb-merci{display:none}
+.cb-merci:target{display:block}
+
+/* Menu repliable sans JavaScript (case à cocher), en dessous de 900 px */
+.cb-menu-case,.cb-menu-bouton{display:none}
+
+@media (max-width:900px){
+  .cb-menu-case{display:block;position:absolute;width:1px;height:1px;margin:0;opacity:0;pointer-events:none}
+  .cb-menu-bouton{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 14px;box-sizing:border-box;border:2px solid var(--texte);border-radius:var(--arrondi-terminal);color:var(--texte);cursor:pointer;user-select:none}
+  .cb-menu-icone{display:block;width:18px;height:2px;background:currentColor;box-shadow:0 -6px 0 currentColor,0 6px 0 currentColor}
+  .cb-menu-case:focus-visible + .cb-menu-bouton{outline:2px solid var(--focus);outline-offset:2px}
+  .cb-entete nav,.cb-entete .cb-entete__adherer{display:none}
+  .cb-menu-case:checked ~ nav{display:block;flex:1 1 100%}
+  .cb-menu-case:checked ~ .cb-entete__adherer{display:inline-flex}
+  .cb-entete nav ul{flex-direction:column;gap:0 !important}
+  .cb-entete nav a{display:block;padding:14px 0;border-top:1px solid var(--filet)}
+  .cb-entete nav li:last-child a{border-bottom:1px solid var(--filet)}
+}
+
+/* Sur écran étroit, l'image d'ouverture placée à gauche passe sous le texte */
+@media (max-width:960px){
+  .cb-image-gauche{order:2}
+}
+
+
+/* Petits écrans : retraits latéraux des colonnes séparées par un filet */
+@media (max-width:600px){
+  .cb-sans-retrait-mobile{padding-left:0 !important;border-left:none !important}
+}
+
+/* Petits écrans : portraits et logos sur deux colonnes plutôt qu'une */
+@media (max-width:600px){
+  .cb-grille-portraits{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:var(--espace-4) var(--espace-2) !important}
+  .cb-grille-portraits .ise-portrait__role{font-size:12px;line-height:16px}
+  .cb-grille-portraits .nom{font-size:17px !important;line-height:22px !important}
+  .cb-grille-portraits .ise-portrait__fonction{font-size:14px !important;line-height:20px !important}
+  .cb-grille-logos{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+}
+
+
+/* Menu principal fixé en haut de l’écran pendant le défilement */
+[data-entete]{position:sticky;top:0;z-index:100}

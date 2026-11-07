@@ -1,0 +1,51 @@
+/* Iseeer, piste B : styles partagés des pages ajoutées et menu mobile.
+   Complète composants.css et iseeer-site.css sans les modifier. */
+
+/* Grilles de portraits (bureau, direction) et de cartes */
+.piste-portraits { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--espace-4) var(--espace-3); margin: 0; padding: 0; list-style: none; }
+.piste-portraits--trois { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 1100px; }
+.piste-grille-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--espace-4) var(--espace-3); margin: 0; padding: 0; list-style: none; }
+.piste-frise { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); row-gap: var(--espace-4); margin: 0; padding: 0; list-style: none; }
+
+/* Bouton dont la cible n'existe pas encore (bulletin, statuts) */
+.piste-indisponible { opacity: .55; cursor: default; }
+.piste-indisponible:hover { text-decoration: none; }
+
+/* Formulaire de contact */
+.piste-formulaire { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--espace-3); margin: 0; }
+.piste-formulaire .piste-pleine { grid-column: 1 / -1; }
+.piste-formulaire select.ise-champ { appearance: auto; }
+.piste-consentement { display: flex; align-items: flex-start; gap: 12px; }
+.piste-consentement input { flex-shrink: 0; width: 20px; height: 20px; margin: 4px 0 0; accent-color: var(--action); }
+.piste-envoye { margin: 0; padding: var(--espace-3); background: var(--fond-teinte); border-left: 4px solid var(--signal); }
+
+/* Tablette */
+@media (max-width: 1100px) {
+  .piste-portraits { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .piste-grille-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Menu : sous 900 px, le menu passe sous le logo, sur toute la largeur, et revient à la ligne */
+@media (max-width: 899px) {
+  .ise-entete { padding: var(--espace-2) var(--espace-3); column-gap: var(--espace-2); }
+  .ise-entete > nav { order: 3; flex: 1 1 100%; min-width: 0; padding-top: var(--espace-1); border-top: 1px solid var(--filet); }
+  .ise-entete__menu { column-gap: var(--espace-3); }
+  .ise-entete__menu a { display: inline-block; padding: 6px 0; }
+  .piste-portraits, .piste-portraits--trois { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .piste-formulaire { grid-template-columns: minmax(0, 1fr); }
+  .piste-grille-3 { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  .ise-entete { padding: var(--espace-2); }
+  .ise-entete__menu { column-gap: var(--espace-2); }
+  /* Un libellé de bouton trop long revient à la ligne plutôt que de déborder */
+  .ise-btn { max-width: 100%; box-sizing: border-box; white-space: normal; text-align: center; padding-top: 10px; padding-bottom: 10px; }
+}
+
+
+/* Menu principal fixé en haut de l’écran pendant le défilement (sur mobile, le menu sur plusieurs lignes prendrait trop de hauteur) */
+@media (min-width:901px){[data-entete]{position:sticky;top:0;z-index:100}}

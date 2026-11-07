@@ -1,0 +1,137 @@
+/* Iseeer, maquettes du site.
+   Jetons et styles de texte transcrits de ds/iseeer/tokens.json (le design system
+   ne publie pas de tokens.css), puis quelques aides de mise en page du site. */
+
+:root {
+  --vert-profond: #2b5445;
+  --vert-sombre: #234d40;
+  --vert-tendre: #98b571;
+  --vert-vif: #72a523;
+  --creme: #f5f1e9;
+  --encre: #171e19;
+  --blanc: #ffffff;
+
+  --font-display: Anton, "Arial Narrow", sans-serif;
+  --font-sans: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --espace-1: 8px;
+  --espace-2: 16px;
+  --espace-3: 28px;
+  --espace-4: 44px;
+  --espace-5: 56px;
+  --espace-6: 88px;
+
+  --arrondi-aucun: 0;
+  --arrondi-terminal: 4px;
+  --arrondi-feuille: 40px;
+
+  --largeur-bureau: 1440px;
+  --largeur-mobile: 390px;
+  --mesure-texte: 680px;
+
+  --fond-bandeau: var(--vert-sombre);
+  --sur-bandeau: var(--creme);
+  --accent: var(--vert-tendre);
+  --signal: var(--vert-vif);
+  --sur-signal: var(--encre);
+}
+
+/* Thème clair, par défaut */
+:root, [data-theme="clair"] {
+  --fond: var(--creme);
+  --fond-releve: var(--blanc);
+  --fond-teinte: #dee2cb;
+  --texte: var(--encre);
+  --texte-doux: #5a5d57;
+  --texte-marque: var(--vert-profond);
+  --action: var(--vert-profond);
+  --sur-action: var(--creme);
+  --bordure: #5a5d57;
+  --filet: #d4d1ca;
+  --focus: var(--encre);
+}
+
+/* Thème sombre : blocs sur fond encre */
+[data-theme="sombre"] {
+  --fond: var(--encre);
+  --fond-releve: #1e3128;
+  --fond-teinte: #223c31;
+  --texte: var(--creme);
+  --texte-doux: #b7b6af;
+  --texte-marque: var(--vert-tendre);
+  --action: var(--vert-tendre);
+  --sur-action: var(--encre);
+  --bordure: #b7b6af;
+  --filet: #383e38;
+  --focus: var(--vert-tendre);
+}
+
+/* Styles de texte : titres (Anton) */
+.titre-geant { font-family: var(--font-display); font-size: 200px; line-height: 1; font-weight: 400; text-transform: uppercase; }
+.titre-couverture { font-family: var(--font-display); font-size: 94px; line-height: 107px; font-weight: 400; }
+.titre-page { font-family: var(--font-display); font-size: 80px; line-height: 1; font-weight: 400; text-transform: uppercase; }
+.titre-section { font-family: var(--font-display); font-size: 42px; line-height: 46px; font-weight: 400; text-transform: uppercase; }
+.titre-couverture-mobile { font-family: var(--font-display); font-size: 52px; line-height: 58px; font-weight: 400; }
+.titre-page-mobile { font-family: var(--font-display); font-size: 44px; line-height: 46px; font-weight: 400; text-transform: uppercase; }
+.titre-section-mobile { font-family: var(--font-display); font-size: 30px; line-height: 34px; font-weight: 400; text-transform: uppercase; }
+
+/* Styles de texte : texte (Instrument Sans) */
+.accroche { font-family: var(--font-sans); font-size: 26px; line-height: 41px; font-weight: 400; font-style: italic; }
+.sous-titre { font-family: var(--font-sans); font-size: 24px; line-height: 30px; font-weight: 400; }
+.intertitre { font-family: var(--font-sans); font-size: 22px; line-height: 28px; font-weight: 700; }
+.texte { font-family: var(--font-sans); font-size: 18px; line-height: 28.5px; font-weight: 400; }
+.nom { font-family: var(--font-sans); font-size: 18px; line-height: 25.5px; font-weight: 700; }
+.fonction { font-family: var(--font-sans); font-size: 16px; line-height: 25.5px; font-weight: 400; font-style: italic; }
+.bouton { font-family: var(--font-sans); font-size: 16px; line-height: 20px; font-weight: 600; }
+.etiquette { font-family: var(--font-sans); font-size: 14px; line-height: 18px; font-weight: 700; }
+.surtitre { font-family: var(--font-sans); font-size: 13.5px; line-height: 16px; font-weight: 400; }
+
+/* Aides du site */
+.capitales { text-transform: uppercase; letter-spacing: .04em; }
+.visuellement-cache { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* Emplacement photo : fond teinté et légende de l'image attendue */
+.emplacement-photo {
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+  padding: var(--espace-2);
+  background: var(--fond-teinte);
+  color: var(--texte-doux);
+}
+
+/* Emplacement logo d'un membre fondateur */
+.emplacement-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-sizing: border-box;
+  padding: var(--espace-2);
+  background: var(--fond-releve);
+  border: 1px solid var(--filet);
+  text-align: center;
+}
+
+/* Frise des collèges : repère posé sur la ligne */
+.frise-repere { position: relative; padding-top: var(--espace-3); }
+.frise-repere::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--texte-marque);
+}
+
+/* Liens du pied de page et des blocs sombres */
+.ise-bandeau a:not(.ise-btn) { color: var(--sur-bandeau); text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+[data-theme="sombre"] a:not(.ise-btn) { color: var(--texte-marque); }
+
+/* Champs de formulaire du site */
+.champ-bloc { display: flex; flex-direction: column; gap: var(--espace-1); }
+.champ-bloc .ise-champ { min-height: 48px; width: 100%; box-sizing: border-box; }
+textarea.ise-champ { padding: 12px var(--espace-2); min-height: 120px; resize: vertical; line-height: 25.5px; }

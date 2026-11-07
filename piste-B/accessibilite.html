@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Accessibilité, Iseeer</title>
+<link rel="stylesheet" href="css/composants.css">
+<link rel="stylesheet" href="css/iseeer-site.css">
+<link rel="stylesheet" href="css/piste.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;display=swap">
+<style>
+body{margin:0;background:#171e19}
+a{color:#2b5445}a:hover{color:#171e19}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../presentation.css">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="avec-presentation">
+<nav class="pres-barre" aria-label="Présentation des trois pistes">
+  <a href="../index.html">← <span class="pres-long">Revenir aux </span>trois pistes</a>
+  <span class="pres-barre__titre"><strong>Piste B</strong><span>, l’encre</span></span>
+  <span class="pres-barre__pistes"><a href="../piste-A/accessibilite.html" title="La même page dans la piste A">← <span class="pres-long">Piste précédente </span>(A)</a><a href="../piste-C/accessibilite.html" title="La même page dans la piste C"><span class="pres-long">Piste suivante </span>(C) →</a></span>
+</nav>
+<div class="ise-page" data-theme="clair" style="min-width: 0">
+
+<header data-entete class="ise-entete" data-theme="sombre" style="flex-wrap: wrap; row-gap: var(--espace-2)">
+  <a href="index.html" aria-label="Iseeer, accueil" style="display: block; flex-shrink: 0">
+    <img class="ise-entete__logo" src="img/logo-iseeer-creme.svg" alt="Iseeer">
+  </a>
+  <nav aria-label="Menu principal">
+    <ul class="ise-entete__menu" style="flex-wrap: wrap; row-gap: var(--espace-1)">
+      <li><a class="bouton" href="campus.html">Le Campus</a></li>
+      <li><a class="bouton" href="agora.html">L’Agora</a></li>
+      <li><a class="bouton" href="tribune.html">La Tribune</a></li>
+      <li><a class="bouton" href="gouvernance.html">Gouvernance</a></li>
+      <li><a class="bouton" href="soutiens.html">Ils nous soutiennent</a></li>
+      <li><a class="bouton" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="ise-entete__outils">
+    <a class="ise-btn ise-btn--signal ise-btn--petit" href="adherer.html">Adhérer à l’Agora</a>
+  </div>
+</header>
+
+<section data-theme="sombre" aria-labelledby="v2b-titre-page" style="background: var(--fond); color: var(--texte)">
+  <div style="max-width: 1440px; margin: 0 auto; padding: var(--espace-5) var(--espace-4); box-sizing: border-box">
+    <h1 id="v2b-titre-page" class="titre-page" style="margin: 0; font-size: clamp(44px, 5.56vw, 80px)">Accessibilité</h1>
+  </div>
+</section>
+
+<section style="padding: var(--espace-6) 0">
+  <div style="max-width: 1440px; margin: 0 auto; padding: 0 var(--espace-4); box-sizing: border-box">
+    <div style="max-width: var(--mesure-texte); display: flex; flex-direction: column; gap: var(--espace-3); padding-top: var(--espace-3); border-top: 2px solid var(--texte)">
+      <p class="texte" style="margin: 0">Une déclaration d’accessibilité indique le niveau de conformité visé (RGAA) et un contact pour signaler une difficulté.</p>
+    </div>
+  </div>
+</section>
+
+<div data-theme="sombre" style="background: var(--fond); color: var(--texte)">
+
+  <footer style="border-top: 1px solid var(--filet)">
+    <div style="max-width: 1440px; margin: 0 auto; padding: var(--espace-5) var(--espace-4) var(--espace-4); box-sizing: border-box; display: flex; flex-direction: column; gap: var(--espace-5)">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--espace-5)">
+        <div style="flex: 1 1 360px; min-width: 0; max-width: 520px; display: flex; flex-direction: column; gap: var(--espace-3)">
+          <img src="img/logo-iseeer-creme.svg" alt="Iseeer" style="display: block; height: 48px; width: auto; align-self: flex-start">
+          <p class="fonction" style="margin: 0; color: var(--texte-doux)">Iseeer, Institut des Sciences de l’Efficacité Énergétique, de l’Environnement et de la Rénovation. Association loi 1901, RNA W751286571.</p>
+        </div>
+        <address style="flex: 1 1 360px; min-width: 0; max-width: 520px; font-style: normal; display: flex; flex-direction: column; gap: var(--espace-1)">
+          <p class="texte" style="margin: 0">Siège&nbsp;: 30 rue du Château des Rentiers, 75013 Paris.</p>
+          <p class="texte" style="margin: 0">Campus&nbsp;: 67 rue Arago, 93400 Saint-Ouen-sur-Seine.</p>
+        </address>
+      </div>
+      <nav aria-label="Liens du pied de page" style="padding-top: var(--espace-3); border-top: 1px solid var(--filet)">
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: var(--espace-1) var(--espace-3)">
+          <li><a class="fonction" href="#" style="font-style: normal">LinkedIn</a></li>
+          <li><a class="fonction" href="mentions-legales.html" style="font-style: normal">Mentions légales</a></li>
+          <li><a class="fonction" href="confidentialite.html" style="font-style: normal">Politique de confidentialité</a></li>
+          <li><a class="fonction" href="cookies.html" style="font-style: normal">Gestion des cookies</a></li>
+          <li><a class="fonction" href="accessibilite.html" aria-current="page" style="font-style: normal">Accessibilité</a></li>
+          <li><a class="fonction" href="contact.html" style="font-style: normal">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</div>
+
+</div>
+</body>
+</html>

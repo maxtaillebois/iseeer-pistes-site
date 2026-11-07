@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Contacter l’Iseeer</title>
+<link rel="stylesheet" href="css/composants.css">
+<link rel="stylesheet" href="css/iseeer-site.css">
+<link rel="stylesheet" href="css/piste.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;display=swap">
+<style>
+body{margin:0;background:#171e19}
+a{color:#2b5445}a:hover{color:#171e19}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../presentation.css">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="avec-presentation">
+<nav class="pres-barre" aria-label="Présentation des trois pistes">
+  <a href="../index.html">← <span class="pres-long">Revenir aux </span>trois pistes</a>
+  <span class="pres-barre__titre"><strong>Piste B</strong><span>, l’encre</span></span>
+  <span class="pres-barre__pistes"><a href="../piste-A/contact.html" title="La même page dans la piste A">← <span class="pres-long">Piste précédente </span>(A)</a><a href="../piste-C/contact.html" title="La même page dans la piste C"><span class="pres-long">Piste suivante </span>(C) →</a></span>
+</nav>
+<div class="ise-page" data-theme="clair" style="min-width: 0">
+
+<header data-entete class="ise-entete" data-theme="sombre" style="flex-wrap: wrap; row-gap: var(--espace-2)">
+  <a href="index.html" aria-label="Iseeer, accueil" style="display: block; flex-shrink: 0">
+    <img class="ise-entete__logo" src="img/logo-iseeer-creme.svg" alt="Iseeer">
+  </a>
+  <nav aria-label="Menu principal">
+    <ul class="ise-entete__menu" style="flex-wrap: wrap; row-gap: var(--espace-1)">
+      <li><a class="bouton" href="campus.html">Le Campus</a></li>
+      <li><a class="bouton" href="agora.html">L’Agora</a></li>
+      <li><a class="bouton" href="tribune.html">La Tribune</a></li>
+      <li><a class="bouton" href="gouvernance.html">Gouvernance</a></li>
+      <li><a class="bouton" href="soutiens.html">Ils nous soutiennent</a></li>
+      <li><a class="bouton" href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="ise-entete__outils">
+    <a class="ise-btn ise-btn--signal ise-btn--petit" href="adherer.html">Adhérer à l’Agora</a>
+  </div>
+</header>
+
+<section data-theme="sombre" aria-labelledby="v2b-titre-contact-page" style="background: var(--fond); color: var(--texte); display: flex; flex-wrap: wrap">
+  <div style="flex: 5 1 480px; max-width: 660px; min-height: 320px; position: relative">
+    <img src="img/facade-vegetalisee-tour.jpg" alt="Façade vitrée d’une tour couverte de plantes grimpantes, sous un ciel bleu" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover">
+  </div>
+  <div style="flex: 7 1 640px; min-width: 0; box-sizing: border-box; padding: var(--espace-4); display: flex; flex-direction: column; justify-content: center; gap: var(--espace-3)">
+    <p class="surtitre capitales" style="margin: 0; color: var(--texte-marque)">Contact</p>
+    <h1 id="v2b-titre-contact-page" class="titre-couverture" style="margin: 0; font-size: clamp(40px, 4.45vw, 64px); line-height: 1.1">Nous écrire.</h1>
+    <div style="display: flex; flex-direction: column; gap: var(--espace-3)">
+      <p class="sous-titre" style="margin: 0; max-width: var(--mesure-texte); font-size: 19px; line-height: 28px">Une question sur une formation, une adhésion, un partenariat&#8239;? Choisissez l’objet de votre message&nbsp;: il arrivera directement à la bonne personne.</p>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Formulaire et adresses" style="padding: var(--espace-6) 0">
+  <div style="max-width: 1440px; margin: 0 auto; padding: 0 var(--espace-4); box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: flex-start; gap: var(--espace-5) var(--espace-6)">
+    <div id="formulaire" style="flex: 7 1 560px; min-width: 0; display: flex; flex-direction: column; gap: var(--espace-4)">
+      <h2 class="titre-page" style="margin: 0; font-size: clamp(44px, 5.56vw, 80px)">Le formulaire</h2>
+      <form id="formulaire-contact" class="piste-formulaire" action="#" style="padding-top: var(--espace-3); border-top: 2px solid var(--texte)">
+        <div class="champ-bloc piste-pleine">
+          <label class="nom" for="champ-objet">Objet de votre message</label>
+          <select class="ise-champ" id="champ-objet" name="objet" required>
+            <option value="formations">Me former ou former mes équipes</option>
+            <option value="agora">Adhérer à l’Agora</option>
+            <option value="partenariat">Devenir partenaire</option>
+            <option value="presse">Presse</option>
+            <option value="autre">Autre demande</option>
+          </select>
+        </div>
+        <div class="champ-bloc piste-pleine">
+          <label class="nom" for="champ-nom">Nom et prénom</label>
+          <input class="ise-champ" id="champ-nom" name="nom" type="text" autocomplete="name" required>
+        </div>
+        <div class="champ-bloc">
+          <label class="nom" for="champ-organisation">Organisation (facultatif)</label>
+          <input class="ise-champ" id="champ-organisation" name="organisation" type="text" autocomplete="organization">
+        </div>
+        <div class="champ-bloc">
+          <label class="nom" for="champ-fonction">Fonction (facultatif)</label>
+          <input class="ise-champ" id="champ-fonction" name="fonction" type="text" autocomplete="organization-title">
+        </div>
+        <div class="champ-bloc">
+          <label class="nom" for="champ-email">Adresse e-mail</label>
+          <input class="ise-champ" id="champ-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="champ-bloc">
+          <label class="nom" for="champ-telephone">Téléphone (facultatif)</label>
+          <input class="ise-champ" id="champ-telephone" name="telephone" type="tel" autocomplete="tel">
+        </div>
+        <div class="champ-bloc piste-pleine">
+          <label class="nom" for="champ-message">Votre message</label>
+          <textarea class="ise-champ" id="champ-message" name="message" rows="6" required></textarea>
+        </div>
+        <div class="piste-consentement piste-pleine">
+          <input id="champ-consentement" name="consentement" type="checkbox" required>
+          <label class="fonction" for="champ-consentement" style="font-style: normal">J’accepte que l’Iseeer utilise ces informations pour répondre à ma demande. Elles ne sont pas cédées et sont conservées trois ans au plus. En savoir plus&nbsp;: <a class="ise-lien" href="confidentialite.html">politique de confidentialité</a>.</label>
+        </div>
+        <div class="piste-pleine">
+          <button class="ise-btn ise-btn--action" type="submit">Envoyer</button>
+        </div>
+        <p id="envoye" class="piste-envoye accroche piste-pleine" role="status" hidden>Merci, votre message est bien arrivé. Nous vous répondons sous cinq jours ouvrés.</p>
+      </form>
+    </div>
+    <aside id="adresses" aria-labelledby="v2b-titre-adresses" style="flex: 5 1 360px; min-width: 0; box-sizing: border-box; padding: var(--espace-4); background: var(--fond-teinte); display: flex; flex-direction: column; gap: var(--espace-3)">
+      <h2 id="v2b-titre-adresses" class="titre-section" style="margin: 0">Les adresses</h2>
+      <div style="display: flex; flex-direction: column; gap: 4px; padding-top: var(--espace-2); border-top: 2px solid var(--texte)">
+        <h3 class="intertitre" style="margin: 0">Siège social</h3>
+        <address class="texte" style="font-style: normal">30 rue du Château des Rentiers, 75013 Paris<br><a class="ise-lien" href="mailto:asso@iseeer.fr">asso@iseeer.fr</a></address>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px; padding-top: var(--espace-2); border-top: 2px solid var(--texte)">
+        <h3 class="intertitre" style="margin: 0">Campus</h3>
+        <address class="texte" style="font-style: normal">67 rue Arago, 93400 Saint-Ouen-sur-Seine</address>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px; padding-top: var(--espace-2); border-top: 2px solid var(--texte)">
+        <h3 class="intertitre" style="margin: 0">Agora&nbsp;: adhésions et réseau</h3>
+        <address class="texte" style="font-style: normal"><a class="ise-lien" href="mailto:agora@iseeer.fr">agora@iseeer.fr</a></address>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px; padding-top: var(--espace-2); border-top: 2px solid var(--texte)">
+        <h3 class="intertitre" style="margin: 0">Formations</h3>
+        <address class="texte" style="font-style: normal"><a class="ise-lien" href="mailto:seformer@iseeer.fr">seformer@iseeer.fr</a></address>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px; padding-top: var(--espace-2); border-top: 2px solid var(--texte)">
+        <h3 class="intertitre" style="margin: 0">Presse</h3>
+        <address class="texte" style="font-style: normal">Franck Thiebaux, <a class="ise-lien" href="tel:+33673767498">06 73 76 74 98</a></address>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div data-theme="sombre" style="background: var(--fond); color: var(--texte)">
+
+  <footer style="border-top: 1px solid var(--filet)">
+    <div style="max-width: 1440px; margin: 0 auto; padding: var(--espace-5) var(--espace-4) var(--espace-4); box-sizing: border-box; display: flex; flex-direction: column; gap: var(--espace-5)">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--espace-5)">
+        <div style="flex: 1 1 360px; min-width: 0; max-width: 520px; display: flex; flex-direction: column; gap: var(--espace-3)">
+          <img src="img/logo-iseeer-creme.svg" alt="Iseeer" style="display: block; height: 48px; width: auto; align-self: flex-start">
+          <p class="fonction" style="margin: 0; color: var(--texte-doux)">Iseeer, Institut des Sciences de l’Efficacité Énergétique, de l’Environnement et de la Rénovation. Association loi 1901, RNA W751286571.</p>
+        </div>
+        <address style="flex: 1 1 360px; min-width: 0; max-width: 520px; font-style: normal; display: flex; flex-direction: column; gap: var(--espace-1)">
+          <p class="texte" style="margin: 0">Siège&nbsp;: 30 rue du Château des Rentiers, 75013 Paris.</p>
+          <p class="texte" style="margin: 0">Campus&nbsp;: 67 rue Arago, 93400 Saint-Ouen-sur-Seine.</p>
+        </address>
+      </div>
+      <nav aria-label="Liens du pied de page" style="padding-top: var(--espace-3); border-top: 1px solid var(--filet)">
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: var(--espace-1) var(--espace-3)">
+          <li><a class="fonction" href="#" style="font-style: normal">LinkedIn</a></li>
+          <li><a class="fonction" href="mentions-legales.html" style="font-style: normal">Mentions légales</a></li>
+          <li><a class="fonction" href="confidentialite.html" style="font-style: normal">Politique de confidentialité</a></li>
+          <li><a class="fonction" href="cookies.html" style="font-style: normal">Gestion des cookies</a></li>
+          <li><a class="fonction" href="accessibilite.html" style="font-style: normal">Accessibilité</a></li>
+          <li><a class="fonction" href="contact.html" style="font-style: normal">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</div>
+
+</div>
+<script>
+/* Facultatif : présélectionne l'objet (contact.html?objet=formations) et simule l'envoi. Sans JavaScript, la page reste utilisable. */
+(function () {
+  var form = document.getElementById('formulaire-contact');
+  if (!form) return;
+  var objet = new URLSearchParams(window.location.search).get('objet');
+  var liste = document.getElementById('champ-objet');
+  if (objet && liste) {
+    for (var i = 0; i < liste.options.length; i++) {
+      if (liste.options[i].value === objet) { liste.selectedIndex = i; break; }
+    }
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('envoye').hidden = false;
+    form.querySelector('button[type="submit"]').disabled = true;
+  });
+})();
+</script>
+</body>
+</html>
