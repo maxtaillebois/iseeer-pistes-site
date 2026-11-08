@@ -49,3 +49,6 @@
 
 /* Menu principal fixé en haut de l’écran pendant le défilement (sur mobile, le menu sur plusieurs lignes prendrait trop de hauteur) */
 @media (min-width:901px){[data-entete]{position:sticky;top:0;z-index:100}}
+
+/* Échelle d'ensemble sur écran d'ordinateur : tout le site à 90 %, comme le zoom 90 % de Chrome (à 100 %, la page paraissait trop massive) */
+@media (min-width:901px){html{zoom:.9}}
