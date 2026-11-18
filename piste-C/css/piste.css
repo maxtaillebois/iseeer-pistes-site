@@ -66,3 +66,10 @@ a:not(.ise-btn){color:#2b5445}a:not(.ise-btn):hover{color:#171e19}
 
 /* Échelle d'ensemble sur écran d'ordinateur : tout le site à 90 %, comme le zoom 90 % de Chrome (à 100 %, la page paraissait trop massive) */
 @media (min-width:901px){html{zoom:.9}}
+
+
+/* En-tête : lien Espace adhérents et bouton Adhérer, regroupés (ajout du 17 novembre) */
+.cb-entete__outils{display:flex;align-items:center;gap:var(--espace-3)}
+@media (max-width:900px){.cb-entete .cb-entete__outils{display:none}.cb-menu-case:checked ~ .cb-entete__outils{display:flex;flex:1 1 100%;flex-wrap:wrap;justify-content:space-between;gap:var(--espace-2)}}
+/* Avec le lien Espace adhérents, le menu se resserre pour tenir sur une ligne */
+@media (min-width:901px){.cb-entete{column-gap:var(--espace-3) !important}.cb-entete nav ul{column-gap:var(--espace-3) !important}}

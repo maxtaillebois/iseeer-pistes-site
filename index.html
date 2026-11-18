@@ -24,6 +24,15 @@ h1{font-family:Anton,"Arial Narrow",sans-serif;font-weight:400;text-transform:up
 .piste h2{margin:0;font-size:22px;line-height:1.3}
 .piste p{margin:0;font-size:16px;line-height:1.5;color:var(--doux)}
 .piste .ouvrir{margin-top:12px;font-weight:600;color:var(--vert);text-decoration:underline;text-decoration-color:var(--tendre);text-decoration-thickness:2px;text-underline-offset:5px}
+.parcours{margin-top:72px;padding-top:28px;border-top:2px solid var(--encre)}
+.parcours h2{font-family:Anton,"Arial Narrow",sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(28px,3.4vw,42px);line-height:1.05;margin:0 0 12px}
+.parcours ol{margin:28px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;counter-reset:etape}
+.parcours li{counter-increment:etape;background:#fff;border:1px solid var(--filet);padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px}
+.parcours li::before{content:counter(etape,decimal-leading-zero);font-family:Anton,"Arial Narrow",sans-serif;font-size:28px;line-height:1;color:var(--vert)}
+.parcours h3{margin:0;font-size:18px;line-height:1.3}
+.parcours p{margin:0;font-size:15px;line-height:1.5;color:var(--doux)}
+.parcours .liens{display:flex;gap:14px;margin-top:auto;padding-top:8px}
+.parcours .liens a{font-weight:600;color:var(--vert);text-decoration:underline;text-decoration-color:var(--tendre);text-decoration-thickness:2px;text-underline-offset:4px}
 footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--filet);font-size:14px;color:var(--doux)}
 </style>
 </head>
@@ -31,7 +40,7 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--filet);font-s
 <main>
   <img class="logo" src="piste-A/img/logo-iseeer-vert.svg" alt="Iseeer">
   <h1>Le site, en trois pistes</h1>
-  <p class="chapo">Voici trois pistes en 7 pages. Le contenu (texte, images, etc.) est provisoire, il s’appuie sur les éléments que j’ai collectés (présentation, articles de presse et autres). Il faudra tout relire attentivement.</p>
+  <p class="chapo">Voici trois pistes en 7 pages, et depuis le 17 novembre le parcours d’adhésion. Le contenu (texte, images, etc.) est provisoire, il s’appuie sur les éléments que j’ai collectés (présentation, articles de presse et autres). Il faudra tout relire attentivement.</p>
   <p class="chapo">La barre grise tout en haut permet de revenir ici, ou de passer à la même page dans la piste précédente ou suivante, pour comparer.</p>
   <div class="pistes">
     <a class="piste" href="piste-A/index.html">
@@ -62,6 +71,12 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--filet);font-s
       </div>
     </a>
   </div>
+
+  <section class="parcours" aria-labelledby="titre-parcours">
+    <h2 id="titre-parcours">Adhésion, espace adhérent et agenda</h2>
+    <p class="chapo">Ajouté le 17 novembre : le parcours complet, de l’offre à l’espace réservé aux membres, et l’agenda des événements. Chaque étape existe dans les trois pistes. Un bandeau jaune, sous la barre grise, signale ce qui est fictif.</p>
+    <ol><li><h3>On clique sur « Adhérer »</h3><p>L’offre : 3 500 € par an, ce qu’elle comprend, visiteur ou adhérent, les quatre étapes.</p><span class="liens"><a href="piste-A/adherer.html">A</a><a href="piste-B/adherer.html">B</a><a href="piste-C/adherer.html">C</a></span></li><li><h3>Le bulletin et le paiement</h3><p>Organisme, collège, contact, puis carte ou virement sur facture.</p><span class="liens"><a href="piste-A/adhesion.html">A</a><a href="piste-B/adhesion.html">B</a><a href="piste-C/adhesion.html">C</a></span></li><li><h3>L’accueil de l’adhérent</h3><p>Juste après le paiement : les accès partent par mail, ce qui attend dans l’espace, le premier rendez-vous.</p><span class="liens"><a href="piste-A/bienvenue.html">A</a><a href="piste-B/bienvenue.html">B</a><a href="piste-C/bienvenue.html">C</a></span></li><li><h3>La connexion</h3><p>Identifiant (l’adresse mail) et mot de passe. À côté, l’appel à adhérer pour ceux qui ne le sont pas.</p><span class="liens"><a href="piste-A/connexion.html">A</a><a href="piste-B/connexion.html">B</a><a href="piste-C/connexion.html">C</a></span></li><li><h3>L’espace adhérent</h3><p>Le tableau de bord : annuaire, contenus réservés, agenda, l’adhésion et les collaborateurs.</p><span class="liens"><a href="piste-A/espace.html">A</a><a href="piste-B/espace.html">B</a><a href="piste-C/espace.html">C</a></span></li><li><h3>L’annuaire</h3><p>La recherche par nom, métier ou collège, et les fiches des membres.</p><span class="liens"><a href="piste-A/espace-annuaire.html">A</a><a href="piste-B/espace-annuaire.html">B</a><a href="piste-C/espace-annuaire.html">C</a></span></li><li><h3>Les contenus réservés</h3><p>Comptes rendus, vidéos, présentations, notes de la Tribune.</p><span class="liens"><a href="piste-A/espace-contenus.html">A</a><a href="piste-B/espace-contenus.html">B</a><a href="piste-C/espace-contenus.html">C</a></span></li><li><h3>L’agenda public</h3><p>Le calendrier du mois et la liste de la saison, ouverts à tous. Événements payants pour les visiteurs, certains réservés aux adhérents.</p><span class="liens"><a href="piste-A/agenda.html">A</a><a href="piste-B/agenda.html">B</a><a href="piste-C/agenda.html">C</a></span></li><li><h3>La fiche événement, côté visiteur</h3><p>Programme, places restantes, formulaire d’inscription avec paiement.</p><span class="liens"><a href="piste-A/evenement.html">A</a><a href="piste-B/evenement.html">B</a><a href="piste-C/evenement.html">C</a></span></li><li><h3>La même fiche, côté adhérent</h3><p>L’inscription est comprise : un clic, et c’est réservé.</p><span class="liens"><a href="piste-A/evenement-adherent.html">A</a><a href="piste-B/evenement-adherent.html">B</a><a href="piste-C/evenement-adherent.html">C</a></span></li></ol>
+  </section>
   <footer>Maquettes de travail, novembre 2026. Photos d’illustration provisoires, formulaires factices : rien n’est envoyé.</footer>
 </main>
 </body>

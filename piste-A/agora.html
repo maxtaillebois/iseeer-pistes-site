@@ -33,6 +33,7 @@ a{color:#2b5445}a:hover{color:#171e19}
     <ul class="ise-entete__menu" style="flex-wrap: wrap; row-gap: var(--espace-1)">
       <li><a class="bouton" href="campus.html">Le Campus</a></li>
       <li><a class="bouton" href="agora.html" aria-current="page">L’Agora</a></li>
+          <li><a class="bouton" href="agenda.html">Agenda</a></li>
       <li><a class="bouton" href="tribune.html">La Tribune</a></li>
       <li><a class="bouton" href="gouvernance.html">Gouvernance</a></li>
       <li><a class="bouton" href="soutiens.html">Ils nous soutiennent</a></li>
@@ -40,7 +41,7 @@ a{color:#2b5445}a:hover{color:#171e19}
     </ul>
   </nav>
   <div class="ise-entete__outils">
-    <a class="ise-btn ise-btn--action ise-btn--petit" href="adherer.html">Adhérer à l’Agora</a>
+    <!-- outils --><a class="ise-lien bouton" href="connexion.html" style="display: inline-flex; align-items: center; gap: 8px; white-space: nowrap"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Espace adhérents</a><a class="ise-btn ise-btn--action ise-btn--petit" href="adherer.html">Adhérer à l’Agora</a><!-- /outils -->
   </div>
 </header>
 
@@ -195,12 +196,12 @@ a{color:#2b5445}a:hover{color:#171e19}
           <h2 id="titre-adherer" class="ise-titre__texte titre-section">Adhérer</h2>
         </header>
           <p class="texte" style="margin: 0; max-width: var(--mesure-texte)">L’adhésion est ouverte aux entreprises et organismes de toute la chaîne du bâti. Elle donne accès à l’ensemble des rencontres de l’Agora et à toutes les productions de l’institut.</p>
-          <p class="texte" style="margin: 0; max-width: var(--mesure-texte)">Les conditions et le montant de la cotisation figurent dans le bulletin d’adhésion.</p>
+          <p class="texte" style="margin: 0; max-width: var(--mesure-texte)">La cotisation est de 3 500 € par an. L’adhésion se fait en ligne, en quelques minutes.</p>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--espace-2)">
-            <span class="ise-btn ise-btn--action piste-btn-inactif" aria-disabled="true">Télécharger le bulletin d’adhésion</span>
+            <a class="ise-btn ise-btn--action" href="adherer.html">Adhérer en ligne</a>
             <a class="ise-btn ise-btn--contour" href="contact.html">Écrire à l’Agora</a>
           </div>
-          <p class="fonction ise-a-confirmer" style="margin: 0">Bulletin à venir</p>
+          <p class="fonction" style="margin: 0">Cotisation annuelle : 3 500 €, tous les événements de l’Agora compris.</p>
         </div>
         <div class="piste-panneau" style="flex: 5 1 320px; min-width: 0; padding: var(--espace-5) var(--espace-4); box-sizing: border-box; background: var(--fond-teinte); display: flex; flex-direction: column; justify-content: flex-end; gap: var(--espace-1)">
           <p class="surtitre capitales" style="margin: 0; color: var(--texte-marque)">L’Agora</p>
@@ -223,7 +224,7 @@ a{color:#2b5445}a:hover{color:#171e19}
             <h3 class="intertitre" style="margin: 0">Santé dans l’habitat, énergie et rénovation : mieux vivre dans son logement.</h3>
             <p class="texte" style="margin: 0">Première conférence publique de l’Iseeer, à l’auditorium de l’immeuble Reiwa, pendant la Semaine de l’immobilier et du logement.</p>
           </article>
-          <p class="texte" style="margin: 0; max-width: var(--mesure-texte)">Le programme de la première saison de l’Agora sera publié ici.</p>
+          <p class="texte" style="margin: 0; max-width: var(--mesure-texte)">Le programme de la première saison est en ligne : <a class="ise-lien" href="agenda.html">voir l’agenda</a>.</p>
         </div>
         <img src="img/reiwa-siege-nexity.jpg" alt="L’immeuble Reiwa, siège de Nexity, à Saint-Ouen-sur-Seine" style="flex: 7 1 480px; min-width: 0; max-width: 990px; min-height: 360px; display: block; object-fit: cover; object-position: center">
       </div>

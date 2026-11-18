@@ -1,0 +1,270 @@
+/* Iseeer : tunnel d'adhésion, espace adhérents, agenda et fiches événement.
+   Même fichier dans les trois pistes. Tout passe par les variables de la piste
+   (--fond, --texte, --action…), si bien que chaque bloc prend les couleurs de la section où il est posé.
+   Fichier généré depuis CONTENUS - SOURCES/adhesion : le modifier là-bas, puis relancer generer.py. */
+
+.adh-conteneur{max-width:1440px;margin:0 auto;box-sizing:border-box;padding-left:clamp(16px,3.06vw,44px);padding-right:clamp(16px,3.06vw,44px)}
+.adh-section{padding-top:clamp(56px,6.12vw,88px);padding-bottom:clamp(56px,6.12vw,88px)}
+.adh-pile{display:flex;flex-direction:column;gap:var(--espace-3)}
+.adh-pile > *{margin:0}
+.adh-ligne{display:flex;flex-wrap:wrap;gap:var(--espace-4) var(--espace-5);align-items:flex-start}
+.adh-col-7{flex:7 1 520px;min-width:0}
+.adh-col-5{flex:5 1 340px;min-width:0}
+.adh-col-4{flex:4 1 300px;min-width:0}
+.adh-doux{color:var(--texte-doux)}
+.adh-marque{color:var(--texte-marque)}
+.adh-actions{display:flex;flex-wrap:wrap;align-items:center;gap:var(--espace-2)}
+.adh-section h2,.adh-section h3,.adh-section p{margin:0}
+
+/* Ouverture de page : texte et photo côte à côte, la photo passe dessous sur petit écran */
+.adh-ouverture{display:flex;flex-wrap:wrap;align-items:stretch;gap:var(--espace-4) var(--espace-5)}
+.adh-ouverture__texte{flex:7 1 520px;min-width:0;display:flex;flex-direction:column;gap:var(--espace-3);justify-content:center}
+.adh-ouverture__texte > *{margin:0}
+.adh-ouverture__aside{flex:4 1 340px;min-width:0;display:flex;flex-direction:column;justify-content:flex-end}
+.adh-ouverture__photo{flex:5 1 360px;min-width:0;min-height:300px;position:relative;overflow:hidden}
+.adh-ouverture__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.adh-titre-ouverture{font-family:var(--font-display);font-weight:400;font-size:clamp(40px,4.6vw,66px);line-height:1.08;text-wrap:balance}
+
+/* Fil des étapes du tunnel */
+.adh-fil{display:flex;flex-wrap:wrap;gap:0;margin:0;padding:0;list-style:none;counter-reset:fil;border-top:1px solid var(--filet)}
+.adh-fil li{flex:1 1 150px;display:flex;align-items:center;gap:10px;padding:12px 16px 12px 0;color:var(--texte-doux);font-size:14px;line-height:18px;font-weight:600;counter-increment:fil}
+.adh-fil li::before{content:counter(fil);display:inline-flex;align-items:center;justify-content:center;flex:0 0 26px;height:26px;border-radius:50%;border:1.5px solid currentColor;font-size:13px}
+.adh-fil li[aria-current]{color:var(--texte)}
+.adh-fil li[aria-current]::before{background:var(--action);border-color:var(--action);color:var(--sur-action)}
+.adh-fil li.adh-fait::before{content:"✓";background:transparent}
+.adh-fil a{color:inherit}
+
+/* Prix */
+.adh-prix{display:flex;flex-direction:column;gap:4px}
+.adh-prix__montant{font-family:var(--font-display);font-weight:400;font-size:clamp(72px,7.6vw,110px);line-height:.95;letter-spacing:-.01em}
+.adh-prix__unite{font-size:18px;line-height:26px;font-weight:600}
+
+/* Cartes et encadrés */
+.adh-carte{box-sizing:border-box;padding:clamp(20px,2.4vw,36px);background:var(--fond-releve);color:var(--texte);border:1px solid var(--filet);display:flex;flex-direction:column;gap:var(--espace-2)}
+.adh-carte > *{margin:0}
+.adh-carte--teinte{background:var(--fond-teinte);border-color:transparent}
+.adh-carte--accent{border-top:4px solid var(--action)}
+.adh-carte h2,.adh-carte h3{margin:0}
+.adh-collant{position:sticky;top:120px}
+.adh-filet{border:0;border-top:1px solid var(--filet);margin:0;width:100%}
+
+/* Grilles */
+.adh-grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:var(--espace-3);margin:0;padding:0;list-style:none}
+.adh-grille--large{grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr))}
+.adh-grille--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1000px){.adh-grille--3{grid-template-columns:minmax(0,1fr)}}
+
+/* Liste d'avantages, avec petite coche */
+.adh-coches{margin:0;padding:0;list-style:none;display:flex;flex-direction:column}
+.adh-coches li{position:relative;padding:14px 0 14px 34px;border-top:1px solid var(--filet)}
+.adh-coches li:last-child{border-bottom:1px solid var(--filet)}
+.adh-coches li::before{content:"";position:absolute;left:4px;top:21px;width:14px;height:7px;border-left:2.5px solid var(--texte-marque);border-bottom:2.5px solid var(--texte-marque);transform:rotate(-45deg)}
+
+/* Étapes numérotées */
+.adh-etapes{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:var(--espace-3);counter-reset:etape}
+.adh-etapes li{counter-increment:etape;display:flex;flex-direction:column;gap:var(--espace-1);padding-top:var(--espace-2);border-top:2px solid var(--texte)}
+.adh-etapes li::before{content:"0" counter(etape);font-family:var(--font-display);font-size:34px;line-height:1;color:var(--texte-marque)}
+.adh-etapes p{margin:0}
+
+/* Tableau visiteur / adhérent */
+.adh-comparatif{width:100%;border-collapse:collapse;font-size:17px;line-height:24px}
+.adh-comparatif th,.adh-comparatif td{padding:16px 12px;border-bottom:1px solid var(--filet);text-align:left;vertical-align:top}
+.adh-comparatif thead th{font-size:14px;line-height:18px;text-transform:uppercase;letter-spacing:.04em;color:var(--texte-doux);border-bottom:2px solid var(--texte)}
+.adh-comparatif td:nth-child(n+2),.adh-comparatif th:nth-child(n+2){width:26%}
+.adh-comparatif .adh-oui{font-weight:700;color:var(--texte-marque)}
+.adh-comparatif .adh-non{color:var(--texte-doux)}
+.adh-comparatif tbody th{font-weight:400}
+@media (max-width:640px){.adh-comparatif{font-size:15px;line-height:21px}.adh-comparatif th,.adh-comparatif td{padding:12px 6px}}
+
+/* Étiquettes */
+.adh-etiquette{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;padding:4px 10px;border:1.5px solid currentColor;border-radius:var(--arrondi-terminal);font-size:13px;line-height:16px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.adh-etiquette--plein{background:var(--action);border-color:var(--action);color:var(--sur-action)}
+.adh-etiquette--reserve{color:var(--texte)}
+.adh-etiquette svg{flex:0 0 auto}
+
+/* Formulaires */
+.adh-form{display:flex;flex-direction:column;gap:var(--espace-4)}
+.adh-form fieldset{margin:0;padding:0;border:0;min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--espace-3)}
+.adh-form legend{padding:0 0 var(--espace-3);display:flex;align-items:baseline;gap:12px;grid-column:1 / -1}
+.adh-form legend .adh-num{font-family:var(--font-display);font-size:26px;line-height:1;color:var(--texte-marque)}
+.adh-form .adh-large{grid-column:1 / -1}
+.adh-form label{color:var(--texte)}
+.adh-form select.ise-champ{appearance:auto}
+.adh-aide{font-size:14px;line-height:20px;color:var(--texte-doux);margin:0}
+.adh-case{display:flex;align-items:flex-start;gap:12px}
+.adh-case input{flex-shrink:0;width:20px;height:20px;margin:3px 0 0;accent-color:var(--action)}
+.adh-choix{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:var(--espace-2)}
+.adh-choix label{display:flex;align-items:flex-start;gap:12px;padding:var(--espace-2);border:1.5px solid var(--filet);border-radius:var(--arrondi-terminal);background:var(--fond-releve);cursor:pointer}
+.adh-choix label:has(input:checked){border-color:var(--action);box-shadow:inset 0 0 0 1px var(--action)}
+.adh-choix input{flex-shrink:0;width:20px;height:20px;margin:2px 0 0;accent-color:var(--action)}
+.adh-choix span{display:flex;flex-direction:column;gap:2px}
+.adh-paiement{display:grid;grid-template-columns:2fr 1fr 1fr;gap:var(--espace-2);padding:var(--espace-3);border:1px dashed var(--bordure);border-radius:var(--arrondi-terminal)}
+.adh-paiement .adh-large{grid-column:1 / -1}
+.adh-cadenas{display:inline-flex;align-items:center;gap:8px}
+@media (max-width:640px){
+  .adh-form fieldset{grid-template-columns:minmax(0,1fr)}
+  .adh-paiement{grid-template-columns:1fr 1fr}
+  .adh-paiement .adh-paiement__numero{grid-column:1 / -1}
+}
+
+/* Récapitulatif de commande */
+.adh-recap{margin:0;display:flex;flex-direction:column}
+.adh-recap div{display:flex;justify-content:space-between;gap:var(--espace-2);padding:10px 0;border-top:1px solid var(--filet)}
+.adh-recap dt,.adh-recap dd{margin:0}
+.adh-recap .adh-total{border-top:2px solid var(--texte);font-weight:700;font-size:20px;line-height:28px}
+
+/* Message de confirmation des formulaires factices (ancre #merci) */
+.adh-merci:not(:target){display:none !important}
+
+/* Connexion */
+.adh-mur{display:flex;flex-wrap:wrap;align-items:stretch;min-height:min(78vh,760px)}
+.adh-mur__form{flex:6 1 460px;min-width:0;box-sizing:border-box;padding:clamp(40px,5vw,80px) clamp(16px,5vw,80px);display:flex;flex-direction:column;justify-content:center}
+.adh-mur__form form{width:100%;max-width:440px;display:flex;flex-direction:column;gap:var(--espace-3)}
+.adh-mur__form form > *{margin:0}
+.adh-mur__cote{flex:5 1 380px;min-width:0;position:relative;min-height:320px;display:flex;flex-direction:column;justify-content:flex-end;box-sizing:border-box;padding:clamp(28px,3vw,44px)}
+.adh-mur__cote img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.adh-mur__cote::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,30,25,0) 30%,rgba(23,30,25,.88) 100%)}
+.adh-mur__cote > div{position:relative;z-index:1;display:flex;flex-direction:column;gap:var(--espace-2);color:#f5f1e9;max-width:520px}
+.adh-mur__cote > div > *{margin:0}
+.adh-mdp{position:relative}
+.adh-mdp .ise-champ{padding-right:96px}
+.adh-mdp button{position:absolute;right:6px;top:50%;transform:translateY(-50%);min-height:36px;padding:0 12px;border:0;background:transparent;color:var(--texte-marque);font:600 14px/1 var(--font-sans);cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+
+/* Événements : bloc date */
+.adh-date{flex:0 0 auto;width:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 0;background:var(--action);color:var(--sur-action);text-align:center}
+.adh-date__jour{font-family:var(--font-display);font-size:44px;line-height:1}
+.adh-date__mois{font-size:14px;line-height:18px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+
+/* Liste des événements */
+.adh-evts{margin:0;padding:0;list-style:none;display:flex;flex-direction:column}
+.adh-evt{display:flex;gap:var(--espace-3);align-items:stretch;padding:var(--espace-3) 0;border-top:1px solid var(--filet)}
+.adh-evts .adh-evt:last-child{border-bottom:1px solid var(--filet)}
+.adh-evt__corps{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:6px}
+.adh-evt__corps > *{margin:0}
+.adh-evt__titre{font-size:22px;line-height:28px;font-weight:700}
+.adh-evt__titre a{color:inherit;text-decoration:none}
+.adh-evt__titre a:hover{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:5px}
+.adh-evt__infos{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:15px;line-height:22px;color:var(--texte-doux)}
+.adh-evt__fin{flex:0 0 220px;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:var(--espace-1);text-align:right}
+.adh-evt__fin > *{margin:0}
+.adh-evt__prix{font-size:20px;line-height:26px;font-weight:700}
+.adh-evt--reserve .adh-date{background:transparent;color:var(--texte);border:2px solid var(--texte)}
+@media (max-width:760px){
+  .adh-evt{flex-wrap:wrap;gap:var(--espace-2)}
+  .adh-date{width:72px}
+  .adh-date__jour{font-size:36px}
+  .adh-evt__corps{flex:1 1 200px}
+  .adh-evt__fin{flex:1 1 100%;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;text-align:left}
+}
+
+/* Calendrier du mois */
+.adh-cal{width:100%;border-collapse:collapse;table-layout:fixed}
+.adh-cal caption{caption-side:top;text-align:left;padding-bottom:var(--espace-2)}
+.adh-cal th{padding:8px 6px;font-size:13px;line-height:16px;text-transform:uppercase;letter-spacing:.04em;color:var(--texte-doux);text-align:left;font-weight:600}
+.adh-cal td{height:112px;padding:0;vertical-align:top;border:1px solid var(--filet);background:var(--fond-releve)}
+.adh-cal td.adh-cal__hors{background:transparent}
+.adh-cal__case{display:flex;flex-direction:column;gap:6px;height:100%;box-sizing:border-box;padding:8px}
+.adh-cal__num{font-size:15px;line-height:18px;font-weight:600;color:var(--texte-doux)}
+.adh-cal td.adh-cal__aujourdhui .adh-cal__num{display:inline-flex;align-self:flex-start;align-items:center;justify-content:center;min-width:26px;height:26px;border-radius:50%;background:var(--texte);color:var(--fond)}
+.adh-cal__evt{display:block;padding:6px 8px;background:var(--action);color:var(--sur-action) !important;text-decoration:none;font-size:13px;line-height:17px;font-weight:600;border-radius:2px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.adh-cal__evt:hover{text-decoration:underline}
+.adh-cal__evt--reserve{background:transparent;color:var(--texte) !important;border:1.5px solid var(--texte)}
+.adh-cal__nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--espace-2);padding-bottom:var(--espace-2)}
+.adh-cal__mois{font-family:var(--font-display);font-size:clamp(30px,3vw,44px);line-height:1;text-transform:uppercase;margin:0}
+.adh-cal__fleches{display:flex;gap:var(--espace-1)}
+.adh-legende{display:flex;flex-wrap:wrap;gap:var(--espace-1) var(--espace-3);margin:0;padding:var(--espace-2) 0 0;list-style:none;font-size:14px;line-height:20px}
+.adh-legende li{display:flex;align-items:center;gap:8px}
+.adh-legende i{display:inline-block;width:16px;height:16px;background:var(--action)}
+.adh-legende i.adh-legende--reserve{background:transparent;border:1.5px solid var(--texte);box-sizing:border-box}
+@media (max-width:760px){
+  .adh-cal td{height:58px}
+  .adh-cal__case{padding:4px;gap:4px;align-items:center}
+  .adh-cal__evt{font-size:0;line-height:0;width:12px;height:12px;padding:0;border-radius:50%}
+  .adh-cal th{padding:6px 2px;font-size:11px;text-align:center}
+}
+
+/* Filtres de l'agenda */
+.adh-filtres{display:flex;flex-wrap:wrap;gap:var(--espace-1);margin:0;padding:0;list-style:none}
+.adh-filtres button{min-height:40px;padding:0 16px;border:1.5px solid var(--bordure);border-radius:999px;background:transparent;color:var(--texte);font:600 15px/1 var(--font-sans);cursor:pointer}
+.adh-filtres button[aria-pressed="true"]{background:var(--texte);border-color:var(--texte);color:var(--fond)}
+
+/* Bandeau d'appel (connexion, adhésion) */
+.adh-appel{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--espace-2) var(--espace-4);padding:var(--espace-3);background:var(--fond-teinte);border-left:4px solid var(--action)}
+.adh-appel > *{margin:0}
+.adh-appel p{flex:1 1 360px}
+
+/* Fiche événement */
+.adh-fiche-infos{margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:var(--espace-3)}
+.adh-fiche-infos div{display:flex;flex-direction:column;gap:4px;padding-top:var(--espace-1);border-top:1px solid var(--filet)}
+.adh-fiche-infos dt{font-size:13px;line-height:16px;text-transform:uppercase;letter-spacing:.04em;color:var(--texte-doux)}
+.adh-fiche-infos dd{margin:0;font-size:18px;line-height:25px;font-weight:600}
+.adh-programme{margin:0;padding:0;list-style:none;display:flex;flex-direction:column}
+.adh-programme li{display:grid;grid-template-columns:110px 1fr;gap:var(--espace-2);padding:14px 0;border-top:1px solid var(--filet)}
+.adh-programme li:last-child{border-bottom:1px solid var(--filet)}
+.adh-programme strong{font-variant-numeric:tabular-nums}
+.adh-intervenants{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:var(--espace-3);margin:0;padding:0;list-style:none}
+.adh-intervenants li{display:flex;gap:var(--espace-2);align-items:center}
+.adh-avatar{flex:0 0 64px;height:64px;border-radius:50%;background:var(--fond-teinte);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--texte-marque);font-size:18px}
+.adh-intervenants p{margin:0}
+.adh-jauge{height:8px;background:var(--fond-teinte);border-radius:4px;overflow:hidden}
+.adh-jauge span{display:block;height:100%;background:var(--action)}
+
+/* Espace adhérents : tableau de bord */
+.adh-salut{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:var(--espace-3) var(--espace-5)}
+.adh-salut > *{margin:0}
+.adh-statut{display:flex;flex-wrap:wrap;gap:var(--espace-1) var(--espace-3);margin:0;padding:0;list-style:none;font-size:15px;line-height:22px}
+.adh-statut li{display:flex;align-items:center;gap:8px}
+.adh-point{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--signal)}
+.adh-raccourcis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--espace-3);margin:0;padding:0;list-style:none}
+.adh-raccourci{display:flex;flex-direction:column;gap:var(--espace-2);height:100%;box-sizing:border-box;padding:clamp(20px,2.4vw,32px);background:var(--fond-releve);border:1px solid var(--filet);border-top:4px solid var(--action);color:var(--texte) !important;text-decoration:none}
+.adh-raccourci:hover{border-color:var(--action)}
+.adh-raccourci:hover .adh-raccourci__lien{text-decoration-color:currentColor}
+.adh-raccourci > *{margin:0}
+.adh-raccourci__chiffre{font-family:var(--font-display);font-size:56px;line-height:1;color:var(--texte-marque)}
+.adh-raccourci__nom{font-family:var(--font-display);font-size:30px;line-height:1.05;text-transform:uppercase}
+.adh-raccourci__lien{margin-top:auto !important;font-weight:600;color:var(--texte-marque);text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:5px}
+.adh-raccourci svg{width:32px;height:32px;stroke:var(--texte-marque)}
+@media (max-width:900px){.adh-raccourcis{grid-template-columns:minmax(0,1fr)}}
+
+/* Annuaire */
+.adh-recherche{display:flex;flex-wrap:wrap;gap:var(--espace-2);align-items:flex-end}
+.adh-recherche .champ-bloc{flex:1 1 260px;min-width:0}
+.adh-membres{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:var(--espace-3);margin:0;padding:0;list-style:none}
+.adh-membre{display:flex;flex-direction:column;gap:var(--espace-2);height:100%;box-sizing:border-box;padding:var(--espace-3);background:var(--fond-releve);border:1px solid var(--filet)}
+.adh-membre > *{margin:0}
+.adh-membre__tete{display:flex;align-items:center;gap:var(--espace-2)}
+.adh-membre__tete p{margin:0}
+.adh-membre__college{font-size:13px;line-height:18px;text-transform:uppercase;letter-spacing:.04em;color:var(--texte-marque);font-weight:600}
+.adh-membre__contacts{display:flex;flex-wrap:wrap;gap:var(--espace-1) var(--espace-3);margin-top:auto !important;padding-top:var(--espace-2);border-top:1px solid var(--filet);font-size:15px;line-height:20px}
+
+/* Contenus réservés */
+.adh-docs{margin:0;padding:0;list-style:none;display:flex;flex-direction:column}
+.adh-doc{display:flex;align-items:center;gap:var(--espace-3);padding:var(--espace-2) 0;border-top:1px solid var(--filet)}
+.adh-docs .adh-doc:last-child{border-bottom:1px solid var(--filet)}
+.adh-doc__type{flex:0 0 64px;height:64px;display:flex;align-items:center;justify-content:center;background:var(--fond-teinte);color:var(--texte-marque);font-size:12px;line-height:14px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;text-align:center}
+.adh-doc__corps{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:4px}
+.adh-doc__corps > *{margin:0}
+.adh-doc__titre{font-size:18px;line-height:25px;font-weight:700}
+.adh-doc__infos{font-size:14px;line-height:20px;color:var(--texte-doux)}
+@media (max-width:640px){.adh-doc{flex-wrap:wrap}.adh-doc .ise-btn{margin-left:88px}}
+
+/* Menu de l'espace adhérents */
+.adh-onglets{display:flex;flex-wrap:wrap;gap:0 var(--espace-3);margin:0;padding:0;list-style:none;border-bottom:1px solid var(--filet)}
+.adh-onglets a{display:inline-block;padding:14px 0;color:var(--texte) !important;text-decoration:none;font-weight:600;font-size:16px;border-bottom:3px solid transparent;margin-bottom:-1px}
+.adh-onglets a[aria-current]{border-bottom-color:var(--action)}
+.adh-onglets a:hover{border-bottom-color:var(--accent)}
+
+/* En-tête : outils de connexion (toutes les pages) */
+.adh-entete-connexion{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.adh-entete-connexion svg{flex:0 0 auto}
+
+/* Piste A : textes clairs dans le bandeau vert, cartes blanches lisibles par-dessus */
+.ise-bandeau.adh-bandeau{--texte:var(--creme);--texte-doux:#cfd8cb;--texte-marque:var(--vert-tendre);--filet:rgba(245,241,233,.3);--action:var(--vert-tendre);--sur-action:var(--encre);--accent:var(--vert-tendre);--bordure:var(--creme);--focus:var(--creme)}
+.adh-bandeau .adh-carte{--texte:var(--encre);--texte-doux:#5a5d57;--texte-marque:var(--vert-profond);--filet:#d4d1ca;--action:var(--vert-profond);--sur-action:var(--creme);--accent:var(--vert-tendre);--bordure:#5a5d57;--focus:var(--encre)}
+.adh-bandeau .adh-carte a:not(.ise-btn){color:var(--texte-marque)}
+
+/* Calendrier réduit du tableau de bord : un point par événement */
+.adh-cal-mini .adh-cal__evt{font-size:0;line-height:0;width:12px;height:12px;padding:0;border-radius:50%}
+.adh-cal-mini .adh-cal__case{padding:4px;gap:4px}
+.adh-cal-mini .adh-cal__fleches{display:none}
+.adh-cal-mini .adh-cal th{padding:6px 2px;font-size:11px}

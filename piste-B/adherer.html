@@ -12,6 +12,7 @@ body{margin:0;background:#171e19}
 a{color:#2b5445}a:hover{color:#171e19}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/adhesion.css">
 <link rel="stylesheet" href="../presentation.css">
 <meta name="robots" content="noindex, nofollow">
 </head>
@@ -31,6 +32,7 @@ a{color:#2b5445}a:hover{color:#171e19}
     <ul class="ise-entete__menu" style="flex-wrap: wrap; row-gap: var(--espace-1)">
       <li><a class="bouton" href="campus.html">Le Campus</a></li>
       <li><a class="bouton" href="agora.html">L’Agora</a></li>
+          <li><a class="bouton" href="agenda.html">Agenda</a></li>
       <li><a class="bouton" href="tribune.html">La Tribune</a></li>
       <li><a class="bouton" href="gouvernance.html">Gouvernance</a></li>
       <li><a class="bouton" href="soutiens.html">Ils nous soutiennent</a></li>
@@ -38,30 +40,19 @@ a{color:#2b5445}a:hover{color:#171e19}
     </ul>
   </nav>
   <div class="ise-entete__outils">
-    <a class="ise-btn ise-btn--signal ise-btn--petit" href="adherer.html">Adhérer à l’Agora</a>
+    <!-- outils --><a class="ise-lien bouton" href="connexion.html" style="display: inline-flex; align-items: center; gap: 8px; white-space: nowrap"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Espace adhérents</a><a class="ise-btn ise-btn--signal ise-btn--petit" href="adherer.html">Adhérer à l’Agora</a><!-- /outils -->
   </div>
 </header>
 
 <main>
-<section class="ise-bandeau" data-theme="sombre" aria-labelledby="v2b-titre-adherer">
-  <div style="max-width: 1440px; margin: 0 auto; padding: var(--espace-6) var(--espace-4); box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--espace-4) var(--espace-6)">
-    <div style="flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; gap: var(--espace-3)">
-      <svg class="ise-rayons" viewBox="79 315 202 105.5" aria-hidden="true"><path d="M187.88,401.88c-.97,4.49-4.77,6.02-7.89,6.16-2.7.12-7.77-.91-8.58-4.65l-16.81-76.86c-1.03-4.73,2.74-8.48,6.74-9.3,17.37-3.55,45.61-3.19,42.91,9.27l-16.36,75.37Z"></path><path d="M276.2,382.67l-55.76,36.1c-3.63,2.35-7.48,2.28-10.82-.24-2.76-2.08-5.17-6.7-2.63-10.69l36.99-58.03c2.77-4.35,7.35-6.12,12.09-3.32,10.31,6.07,18.97,14.95,24.08,25.78,2.06,4.36.03,7.83-3.96,10.41Z"></path><path d="M136.66,418.67l-52.46-35.66c-3.79-2.57-6.71-5.95-4.24-11.06,7.71-15.94,28.81-31.73,33.88-23.57l36.96,59.41c2.26,3.63.24,8.07-2.05,10.17-3.15,2.87-7.78,3.65-12.08.72Z"></path></svg>
-      <h1 id="v2b-titre-adherer" class="titre-page" style="margin: 0; font-size: clamp(44px, 5.56vw, 80px)">Adhérer à l’Agora</h1>
-      <p class="sous-titre" style="margin: 0; max-width: var(--mesure-texte)">L’adhésion est ouverte aux entreprises et organismes de toute la chaîne du bâti. Elle donne accès à l’ensemble des rencontres de l’Agora et à toutes les productions de l’institut.</p>
-      <p class="texte" style="margin: 0; max-width: var(--mesure-texte)">Les conditions et le montant de la cotisation figurent dans le bulletin d’adhésion.</p>
-    </div>
-    <div style="flex: 0 1 auto; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: var(--espace-2)">
-      <span class="ise-btn ise-btn--signal piste-indisponible" aria-disabled="true">Télécharger le bulletin d’adhésion</span>
-      <span class="fonction ise-a-confirmer">Bulletin à venir</span>
-      <a class="ise-btn ise-btn--inverse" href="contact.html?objet=agora" style="margin-top: var(--espace-1)">Écrire à l’Agora</a>
-    </div>
-  </div>
-</section>
+<section data-theme="sombre" aria-labelledby="titre-adherer" style="background: var(--fond); color: var(--texte)"><div class="adh-conteneur" style="padding-top: var(--espace-3)"><ol class="adh-fil" aria-label="Étapes de l’adhésion"><li aria-current="step">L’offre</li><li>Bulletin et paiement</li><li>Bienvenue</li><li>Votre espace</li></ol></div><div class="adh-conteneur" style="padding-top: var(--espace-5); padding-bottom: var(--espace-6)"><div class="adh-ouverture"><div class="adh-ouverture__texte"><svg class="ise-rayons" viewBox="79 315 202 105.5" aria-hidden="true"><path d="M187.88,401.88c-.97,4.49-4.77,6.02-7.89,6.16-2.7.12-7.77-.91-8.58-4.65l-16.81-76.86c-1.03-4.73,2.74-8.48,6.74-9.3,17.37-3.55,45.61-3.19,42.91,9.27l-16.36,75.37Z"></path><path d="M276.2,382.67l-55.76,36.1c-3.63,2.35-7.48,2.28-10.82-.24-2.76-2.08-5.17-6.7-2.63-10.69l36.99-58.03c2.77-4.35,7.35-6.12,12.09-3.32,10.31,6.07,18.97,14.95,24.08,25.78,2.06,4.36.03,7.83-3.96,10.41Z"></path><path d="M136.66,418.67l-52.46-35.66c-3.79-2.57-6.71-5.95-4.24-11.06,7.71-15.94,28.81-31.73,33.88-23.57l36.96,59.41c2.26,3.63.24,8.07-2.05,10.17-3.15,2.87-7.78,3.65-12.08.72Z"></path></svg><p class="surtitre capitales" style="color: var(--texte-marque)">Adhésion</p><h1 id="titre-adherer" class="adh-titre-ouverture">Adhérer à l’Agora</h1><p class="sous-titre" style="max-width: 720px">L’adhésion est ouverte aux entreprises et organismes de toute la chaîne du bâti. Elle ouvre toutes les rencontres de l’Agora, l’annuaire des membres et les productions de l’institut avant leur publication.</p></div><div class="adh-ouverture__aside"><div class="adh-carte adh-carte--accent" style="gap: var(--espace-3)"><div class="adh-prix"><span class="surtitre capitales adh-doux">Cotisation annuelle</span><span class="adh-prix__montant">3 500 €</span><span class="adh-prix__unite">par an, par entreprise ou organisme</span></div><p class="texte">Tous les événements de l’Agora compris, pour vous et vos collaborateurs.</p><div class="adh-actions"><a class="ise-btn ise-btn--signal" href="adhesion.html">Adhérer en ligne</a></div><p class="adh-aide">Paiement par carte ou par virement. Reçu envoyé par mail. <span class="ise-a-confirmer">Montant et périmètre à confirmer.</span></p><hr class="adh-filet"><p class="texte">Déjà adhérent ? <a class="ise-lien" href="connexion.html">Se connecter</a></p></div></div></div></div></section>
+<section class="adh-section" aria-labelledby="titre-01"><div class="adh-conteneur" style="display: flex; flex-direction: column; gap: var(--espace-5)"><div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--espace-2) var(--espace-4)"><div style="display: flex; flex-direction: column; gap: var(--espace-1)"><p class="surtitre capitales" style="color: var(--texte-marque)">Ce que comprend l’adhésion</p><h2 id="titre-01" class="titre-page" style="font-size: clamp(34px, 4vw, 58px); line-height: 1.02">Une cotisation, et toute l’Agora</h2></div></div><div class="adh-ligne"><div class="adh-col-7"><ul class="adh-coches texte"><li><strong>Tous les événements de l’Agora, sans frais d’inscription.</strong> Séminaires, conférences, petits-déjeuners des collèges, soirées. Pour les visiteurs, chaque événement est payant.</li><li><strong>Les rendez-vous réservés aux adhérents.</strong> Voyages d’étude, groupes de prospective, rencontres entre collèges.</li><li><strong>L’annuaire des membres.</strong> Qui fait quoi, dans quel collège, et comment le joindre.</li><li><strong>Les contenus réservés.</strong> Comptes rendus, présentations des intervenants, vidéos des conférences, notes de la Tribune avant publication.</li><li><strong>Un siège dans le collège de votre métier,</strong> parmi les quatorze collèges de l’Agora.</li><li><strong>Le mentorat,</strong> pour vos collaborateurs et les étudiants du Campus.</li></ul></div><div class="adh-col-5"><figure style="margin: 0; display: flex; flex-direction: column; gap: var(--espace-2)"><img src="img/atelier-plans.jpg" alt="Quatre personnes réunies autour d’une table, penchées sur des plans" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover"><figcaption class="fonction adh-doux">Un adhérent inscrit autant de collaborateurs qu’il le souhaite aux événements. <span class="ise-a-confirmer">Nombre de comptes à l’espace adhérents à confirmer.</span></figcaption></figure></div></div></div></section>
+<section class="adh-section" aria-labelledby="titre-02" style="background: var(--fond-teinte)"><div class="adh-conteneur" style="display: flex; flex-direction: column; gap: var(--espace-5)"><div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--espace-2) var(--espace-4)"><div style="display: flex; flex-direction: column; gap: var(--espace-1)"><p class="surtitre capitales" style="color: var(--texte-marque)">Visiteur ou adhérent</p><h2 id="titre-02" class="titre-page" style="font-size: clamp(34px, 4vw, 58px); line-height: 1.02">Ce qui change quand on adhère</h2></div></div><div style="overflow-x: auto"><table class="adh-comparatif"><thead><tr><th scope="col">Pour</th><th scope="col">Visiteur</th><th scope="col">Adhérent</th></tr></thead><tbody><tr><th scope="row">Voir l’agenda des événements</th><td>Oui</td><td class="adh-oui">Oui</td></tr><tr><th scope="row">S’inscrire à un séminaire ou une conférence ouverts au public</th><td class="adh-non">Payant, à chaque événement (de 60 à 180 €)</td><td class="adh-oui">Compris</td></tr><tr><th scope="row">Participer aux rendez-vous réservés (voyages d’étude, collèges, prospective)</th><td class="adh-non">Non</td><td class="adh-oui">Compris</td></tr><tr><th scope="row">Consulter l’annuaire des membres</th><td class="adh-non">Non</td><td class="adh-oui">Oui</td></tr><tr><th scope="row">Lire les comptes rendus, présentations et notes réservés</th><td class="adh-non">Non</td><td class="adh-oui">Oui</td></tr></tbody></table></div><p class="adh-aide">Tarifs des événements donnés à titre d’exemple, <span class="ise-a-confirmer">à confirmer</span>.</p></div></section>
+<section class="adh-section" aria-labelledby="titre-03"><div class="adh-conteneur" style="display: flex; flex-direction: column; gap: var(--espace-5)"><div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--espace-2) var(--espace-4)"><div style="display: flex; flex-direction: column; gap: var(--espace-1)"><p class="surtitre capitales" style="color: var(--texte-marque)">Comment ça se passe</p><h2 id="titre-03" class="titre-page" style="font-size: clamp(34px, 4vw, 58px); line-height: 1.02">Quatre étapes, en ligne</h2></div></div><ol class="adh-etapes"><li><p class="intertitre">Le bulletin</p><p class="texte">Vous remplissez le bulletin en ligne : votre organisme, votre collège, la personne à contacter. Cinq minutes.</p></li><li><p class="intertitre">Le paiement</p><p class="texte">Par carte, tout de suite. Ou par virement, sur facture, si votre organisme passe par un bon de commande.</p></li><li><p class="intertitre">Vos accès</p><p class="texte">Vous recevez par mail votre identifiant et un lien pour choisir votre mot de passe.</p></li><li><p class="intertitre">Votre espace</p><p class="texte">Vous vous connectez, vous retrouvez l’annuaire, les contenus et l’agenda, et vous vous inscrivez aux événements en un clic.</p></li></ol><div class="adh-appel"><p class="texte">Une question avant d’adhérer ? L’Agora est animée par Guillaume Macher.</p><div class="adh-actions"><a class="ise-btn ise-btn--signal" href="adhesion.html">Adhérer en ligne</a><a class="ise-btn ise-btn--contour" href="contact.html?objet=agora">Écrire à l’Agora</a></div></div></div></section>
+
 </main>
 
-<div data-theme="sombre" style="background: var(--fond); color: var(--texte)">
-  <footer style="border-top: 1px solid var(--filet)">
+<footer style="border-top: 1px solid var(--filet)">
     <div style="max-width: 1440px; margin: 0 auto; padding: var(--espace-5) var(--espace-4) var(--espace-4); box-sizing: border-box; display: flex; flex-direction: column; gap: var(--espace-5)">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--espace-5)">
         <div style="flex: 1 1 360px; min-width: 0; max-width: 520px; display: flex; flex-direction: column; gap: var(--espace-3)">
@@ -85,8 +76,8 @@ a{color:#2b5445}a:hover{color:#171e19}
       </nav>
     </div>
   </footer>
-</div>
 
 </div>
+
 </body>
 </html>

@@ -51,3 +51,8 @@
 
 /* Échelle d'ensemble sur écran d'ordinateur : tout le site à 90 %, comme le zoom 90 % de Chrome (à 100 %, la page paraissait trop massive) */
 @media (min-width:901px){html{zoom:.9}}
+
+
+/* En-tête : lien Espace adhérents à côté du bouton Adhérer (ajout du 17 novembre) */
+.ise-entete__outils{gap:var(--espace-3)}
+@media (max-width:599px){.ise-entete__outils .ise-lien{font-size:0;gap:0 !important}.ise-entete__outils .ise-lien svg{width:22px;height:22px}}

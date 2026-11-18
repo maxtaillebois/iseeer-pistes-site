@@ -12,3 +12,7 @@ body.avec-presentation [data-entete]{top:44px !important}
   .pres-barre{gap:4px;padding:0 6px;font-size:13px}
   .pres-barre__titre span,.pres-long{display:none}
 }
+
+/* Bandeau de note sous la barre : précise ce qui est factice dans la maquette (pages du tunnel d'adhésion) */
+.pres-note{margin:0;padding:8px 16px;background:#fff3c4;color:#2b2b2b;border-bottom:1px solid #e3d48a;font:500 13.5px/1.45 system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+.pres-note a{color:inherit;text-decoration:underline;text-underline-offset:3px;font-weight:700}

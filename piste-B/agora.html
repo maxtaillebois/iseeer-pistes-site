@@ -31,6 +31,7 @@ a{color:#2b5445}a:hover{color:#171e19}
     <ul class="ise-entete__menu" style="flex-wrap: wrap; row-gap: var(--espace-1)">
       <li><a class="bouton" href="campus.html">Le Campus</a></li>
       <li><a class="bouton" href="agora.html" aria-current="page">L’Agora</a></li>
+          <li><a class="bouton" href="agenda.html">Agenda</a></li>
       <li><a class="bouton" href="tribune.html">La Tribune</a></li>
       <li><a class="bouton" href="gouvernance.html">Gouvernance</a></li>
       <li><a class="bouton" href="soutiens.html">Ils nous soutiennent</a></li>
@@ -38,7 +39,7 @@ a{color:#2b5445}a:hover{color:#171e19}
     </ul>
   </nav>
   <div class="ise-entete__outils">
-    <a class="ise-btn ise-btn--signal ise-btn--petit" href="adherer.html">Adhérer à l’Agora</a>
+    <!-- outils --><a class="ise-lien bouton" href="connexion.html" style="display: inline-flex; align-items: center; gap: 8px; white-space: nowrap"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1.5"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Espace adhérents</a><a class="ise-btn ise-btn--signal ise-btn--petit" href="adherer.html">Adhérer à l’Agora</a><!-- /outils -->
   </div>
 </header>
 
@@ -124,11 +125,11 @@ a{color:#2b5445}a:hover{color:#171e19}
       <svg class="ise-rayons" viewBox="79 315 202 105.5" aria-hidden="true"><path d="M187.88,401.88c-.97,4.49-4.77,6.02-7.89,6.16-2.7.12-7.77-.91-8.58-4.65l-16.81-76.86c-1.03-4.73,2.74-8.48,6.74-9.3,17.37-3.55,45.61-3.19,42.91,9.27l-16.36,75.37Z"></path><path d="M276.2,382.67l-55.76,36.1c-3.63,2.35-7.48,2.28-10.82-.24-2.76-2.08-5.17-6.7-2.63-10.69l36.99-58.03c2.77-4.35,7.35-6.12,12.09-3.32,10.31,6.07,18.97,14.95,24.08,25.78,2.06,4.36.03,7.83-3.96,10.41Z"></path><path d="M136.66,418.67l-52.46-35.66c-3.79-2.57-6.71-5.95-4.24-11.06,7.71-15.94,28.81-31.73,33.88-23.57l36.96,59.41c2.26,3.63.24,8.07-2.05,10.17-3.15,2.87-7.78,3.65-12.08.72Z"></path></svg>
       <h2 id="v2b-titre-adherer" class="titre-page" style="margin: 0; font-size: clamp(44px, 5.56vw, 80px)">Adhérer</h2>
       <p class="sous-titre" style="margin: 0; max-width: var(--mesure-texte)">L’adhésion est ouverte aux entreprises et organismes de toute la chaîne du bâti. Elle donne accès à l’ensemble des rencontres de l’Agora et à toutes les productions de l’institut.</p>
-      <p class="texte" style="margin: 0; max-width: var(--mesure-texte)">Les conditions et le montant de la cotisation figurent dans le bulletin d’adhésion.</p>
+      <p class="texte" style="margin: 0; max-width: var(--mesure-texte)">La cotisation est de 3 500 € par an. L’adhésion se fait en ligne, en quelques minutes.</p>
     </div>
     <div style="flex: 0 1 auto; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: var(--espace-2)">
-      <span class="ise-btn ise-btn--signal piste-indisponible" aria-disabled="true">Télécharger le bulletin d’adhésion</span>
-      <span class="fonction ise-a-confirmer">Bulletin à venir</span>
+      <a class="ise-btn ise-btn--signal" href="adherer.html">Adhérer en ligne</a>
+      <span class="fonction">Cotisation annuelle : 3 500 €</span>
       <a class="ise-btn ise-btn--inverse" href="contact.html?objet=agora" style="margin-top: var(--espace-1)">Écrire à l’Agora</a>
     </div>
   </div>
@@ -144,7 +145,7 @@ a{color:#2b5445}a:hover{color:#171e19}
       <h3 class="etiquette capitales" style="margin: 0; color: var(--texte-marque)"><time datetime="2026-11-06">6 novembre 2026</time>, Saint-Ouen-sur-Seine</h3>
       <p class="texte" style="margin: 0; max-width: var(--mesure-texte)"><span class="intertitre" style="display: block; margin-bottom: var(--espace-1)">Santé dans l’habitat, énergie et rénovation&nbsp;: mieux vivre dans son logement.</span> Première conférence publique de l’Iseeer, à l’auditorium de l’immeuble Reiwa, pendant la Semaine de l’immobilier et du logement.</p>
     </article>
-    <p class="texte" style="margin: 0; max-width: var(--mesure-texte); color: var(--texte-doux)">Le programme de la première saison de l’Agora sera publié ici.</p>
+    <p class="texte" style="margin: 0; max-width: var(--mesure-texte); color: var(--texte-doux)">Le programme de la première saison est en ligne : <a class="ise-lien" href="agenda.html">voir l’agenda</a>.</p>
   </div>
 </section>
 
